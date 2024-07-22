@@ -1,0 +1,57 @@
+.FilterFlight {
+    grid-area: filterFlight;
+
+    $color: #2196f3;
+
+    ul {
+        display: grid;
+        grid-template-columns: 252px 252px;
+        grid-template-rows: 50px;
+        list-style: none;
+        padding: 0;
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        li {
+            font-size: 12px;
+            font-family: "OpenSans-Semibold", sans-serif;
+            font-weight: 600;
+
+            label {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+                border: 1px solid #dfe5ec;
+            }
+            &:first-child label {
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                border-right: none;
+            }
+
+            &:last-child label {
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                border-left: none;
+            }
+
+            input[type="radio"]:checked + label {
+                background-color: $color;
+                border: 1px solid $color;
+                color: #ffffff;
+            }
+
+            &:first-child input[type="radio"]:checked + label {
+                border-right: none;
+            }
+            &:last-child input[type="radio"]:checked + label {
+                border-left: none;
+            }
+        }
+    }
+}

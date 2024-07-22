@@ -1,0 +1,10 @@
+.Main {
+    display: grid;
+    grid-template-columns: 232px 502px;
+    grid-template-rows: 50px 194px auto;
+    grid-template-areas:
+        "filterTransfers filterFlight"
+        "filterTransfers tickets"
+        ". tickets";
+    grid-gap: 20px;
+}

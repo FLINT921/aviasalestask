@@ -1,0 +1,84 @@
+.FilterTransfers {
+    grid-area: filterTransfers;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    $color: #2196f3;
+    $colorCheckbox: #9abbce;
+    $colorHover: #f1fcff;
+
+    font-family: "OpenSans-Semibold", sans-serif;
+    color: #4a4a4a;
+
+    p {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-left: 20px;
+        font-weight: 600;
+        font-size: 12px;
+    }
+
+    li {
+        list-style: none;
+        height: 40px;
+        font-weight: 500;
+        font-size: 13px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $colorHover;
+        }
+    }
+
+    input[type="checkbox"] {
+        opacity: 0;
+
+        & + label {
+            display: inline-flex;
+            align-items: center;
+            user-select: none;
+        }
+
+        & + label::before {
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            flex-grow: 0;
+            border: 1px solid $colorCheckbox;
+            border-radius: 2px;
+            margin: 10px 0;
+            margin-right: 10px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 50% 50%;
+        }
+
+        &:checked + label::before {
+            border-color: $color;
+            background-image: url(./Shape.png);
+        }
+
+        &:not(:disabled):not(:checked) + label:hover::before {
+            border-color: #b3d7ff;
+        }
+
+        &:not(:disabled):active + label::before {
+            background-color: #b3d7ff;
+            border-color: #b3d7ff;
+        }
+
+        &:focus + label::before {
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+
+        &:focus:not(:checked) + label::before {
+            border-color: #80bdff;
+        }
+
+        &:disabled + label::before {
+            background-color: #e9ecef;
+        }
+    }
+}

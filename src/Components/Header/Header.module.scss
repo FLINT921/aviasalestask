@@ -1,0 +1,15 @@
+.Header {
+    display: grid;
+    grid-template-columns: auto 60px auto;
+    grid-template-rows: 60px;
+    grid-template-areas: ". logo .";
+    margin-bottom: 50px;
+
+    .logo {
+        grid-area: logo;
+        background-image: url(./Logo.png);
+        background-position: center;
+        border-radius: 50%;
+        box-shadow: 0px 10px 11px rgb(55, 104, 142, 0.3);
+    }
+}
