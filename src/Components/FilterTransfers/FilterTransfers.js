@@ -11,50 +11,23 @@ const FilterTransfers = ({ filters, toggleTransferFilter }) => {
       <p>КОЛИЧЕСТВО ПЕРЕСАДОК</p>
       <ul>
         <li>
-          <input
-            type='checkbox'
-            id='all'
-            className='custom-checkbox'
-            onChange={() => toggleTransferFilter('all')}
-            checked={filters.all}
-          />
+          <input type='checkbox' id='all' className='custom-checkbox' onChange={() => toggleTransferFilter('all')} checked={filters.all} />
           <label htmlFor='all'>Все</label>
         </li>
         <li>
-          <input
-            type='checkbox'
-            id='withoutTransfers'
-            className='custom-checkbox'
-            onChange={() => toggleTransferFilter('withoutTransfers')}
-            checked={filters.withoutTransfers}
-          />
+          <input type='checkbox' id='withoutTransfers' className='custom-checkbox' onChange={() => toggleTransferFilter('withoutTransfers')} checked={filters.withoutTransfers} />
           <label htmlFor='withoutTransfers'>Без пересадок</label>
         </li>
         <li>
-          <input
-            type='checkbox'
-            id='oneTransfers'
-            onChange={() => toggleTransferFilter('oneTransfers')}
-            checked={filters.oneTransfers}
-          />
+          <input type='checkbox' id='oneTransfers' onChange={() => toggleTransferFilter('oneTransfers')} checked={filters.oneTransfers} />
           <label htmlFor='oneTransfers'>1 пересадка</label>
         </li>
         <li>
-          <input
-            type='checkbox'
-            id='twoTransfers'
-            onChange={() => toggleTransferFilter('twoTransfers')}
-            checked={filters.twoTransfers}
-          />
+          <input type='checkbox' id='twoTransfers' onChange={() => toggleTransferFilter('twoTransfers')} checked={filters.twoTransfers} />
           <label htmlFor='twoTransfers'>2 пересадки</label>
         </li>
         <li>
-          <input
-            type='checkbox'
-            id='threeTransfers'
-            onChange={() => toggleTransferFilter('threeTransfers')}
-            checked={filters.threeTransfers}
-          />
+          <input type='checkbox' id='threeTransfers' onChange={() => toggleTransferFilter('threeTransfers')} checked={filters.threeTransfers} />
           <label htmlFor='threeTransfers'>3 пересадки</label>
         </li>
       </ul>

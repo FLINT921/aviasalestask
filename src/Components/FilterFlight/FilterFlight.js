@@ -10,23 +10,11 @@ const FilterFlight = ({ filters, toggleFlightFilter }) => {
     <div className={classes.FilterFlight}>
       <ul>
         <li>
-          <input
-            type='radio'
-            id='сheapestFlight'
-            name='optionFlight'
-            onChange={() => toggleFlightFilter('сheapestFlight')}
-            checked={filters.сheapestFlight}
-          />
+          <input type='radio' id='сheapestFlight' name='optionFlight' onChange={() => toggleFlightFilter('сheapestFlight')} checked={filters.сheapestFlight} />
           <label htmlFor='сheapestFlight'>САМЫЙ ДЕШЕВЫЙ</label>
         </li>
         <li>
-          <input
-            type='radio'
-            id='fastestFlight'
-            name='optionFlight'
-            onChange={() => toggleFlightFilter('fastestFlight')}
-            checked={filters.fastestFlight}
-          />
+          <input type='radio' id='fastestFlight' name='optionFlight' onChange={() => toggleFlightFilter('fastestFlight')} checked={filters.fastestFlight} />
           <label htmlFor='fastestFlight'>САМЫЙ БЫСТРЫЙ</label>
         </li>
       </ul>

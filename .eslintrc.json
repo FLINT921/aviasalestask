@@ -26,19 +26,22 @@
   "plugins": ["react", "prettier", "import"],
   "rules": {
     "indent": ["error", 2, { "SwitchCase": 1 }],
-    "prettier/prettier": ["error", {
-      "printWidth": 120,
-      "tabWidth": 2,
-      "useTabs": false,
-      "semi": true,
-      "singleQuote": true,
-      "quoteProps": "as-needed",
-      "jsxSingleQuote": true,
-      "trailingComma": "all",
-      "bracketSpacing": true,
-      "arrowParens": "always",
-      "endOfLine": "auto"
-    }],
+    "prettier/prettier": [
+      "error",
+      {
+        "printWidth": 200,
+        "tabWidth": 2,
+        "useTabs": false,
+        "semi": true,
+        "singleQuote": true,
+        "quoteProps": "as-needed",
+        "jsxSingleQuote": true,
+        "trailingComma": "all",
+        "bracketSpacing": true,
+        "arrowParens": "always",
+        "endOfLine": "auto"
+      }
+    ],
     "linebreak-style": ["error", "unix"],
     "quotes": ["error", "single", { "avoidEscape": true }],
     "react/react-in-jsx-scope": "off",

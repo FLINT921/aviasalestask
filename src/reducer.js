@@ -1,32 +1,26 @@
 import { combineReducers } from 'redux';
-export const filterTransfers = (
-  state = { all: true, withoutTransfers: true, oneTransfers: true, twoTransfers: true, threeTransfers: true },
-  action,
-) => {
+export const filterFlight = (state = { сheapestFlight: true, fastestFlight: false }, action) => {
   switch (action.type) {
-    case 'TOGGLE_TRANSFER_FILTER':
-      const newState = { ...state, [action.payload]: !state[action.payload] };
-      if (action.payload !== 'all') {
-        newState.all =
-          newState.withoutTransfers && newState.oneTransfers && newState.twoTransfers && newState.threeTransfers;
-      } else {
-        newState.withoutTransfers =
-          newState.oneTransfers =
-          newState.twoTransfers =
-          newState.threeTransfers =
-            newState.all;
-      }
+    case 'TOGGLE_FLIGHT_FILTER': {
+      const newState = { сheapestFlight: false, fastestFlight: false, [action.payload]: true };
       return newState;
+    }
     default:
       return state;
   }
 };
 
-export const filterFlight = (state = { сheapestFlight: true, fastestFlight: false }, action) => {
+export const filterTransfers = (state = { all: true, withoutTransfers: true, oneTransfers: true, twoTransfers: true, threeTransfers: true }, action) => {
   switch (action.type) {
-    case 'TOGGLE_FLIGHT_FILTER':
-      const newState = { сheapestFlight: false, fastestFlight: false, [action.payload]: true };
+    case 'TOGGLE_TRANSFER_FILTER': {
+      const newState = { ...state, [action.payload]: !state[action.payload] };
+      if (action.payload !== 'all') {
+        newState.all = newState.withoutTransfers && newState.oneTransfers && newState.twoTransfers && newState.threeTransfers;
+      } else {
+        newState.withoutTransfers = newState.oneTransfers = newState.twoTransfers = newState.threeTransfers = newState.all;
+      }
       return newState;
+    }
     default:
       return state;
   }
